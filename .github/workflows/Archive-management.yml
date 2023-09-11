@@ -31,9 +31,7 @@ jobs:
        find . -type f -newermt '1 minute ago' -print
 
     - name: Compress Files
-      run: |
-        tar --dereference --warning=no-file-changed -czvf archive.tar.gz .
-
+      run: tar --dereference --warning=no-file-changed -czvf archive.tar.gz --exclude=.git* --exclude=.github*
 
     - name: Upload to Archive
       run: |
