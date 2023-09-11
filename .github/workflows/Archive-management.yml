@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3  # Updated to v3 for Node 16 support
 
     - name: Validate Files
       run: |
