@@ -20,8 +20,6 @@ jobs:
         find . -name '*.py' -exec python -m py_compile {} \;
         # Syntax check for Bash files
         find . -name '*.sh' -exec bash -n {} \;
-        # CSS Linting (install a CSS linter before this step if needed)
-        # find . -name '*.css' -exec csslint {} \;
 
     - name: Check for Sensitive Data
       run: |
@@ -30,8 +28,8 @@ jobs:
 
     - name: Compress Files
       run: |
-        # Compress files into a TAR.GZ archive
-        tar -czvf archive.tar.gz .
+        # Compress files into a TAR.GZ archive, including files pointed by symbolic links
+        tar --dereference --warning=no-file-changed -czvf archive.tar.gz .
 
     - name: Upload to Archive
       run: |
