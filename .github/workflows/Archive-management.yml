@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
   schedule:
-    - cron: '0 0 * * *'  # Run daily at midnight
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -13,21 +13,18 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v3  # Updated to v3 for Node 16 support
+      uses: actions/checkout@v3
 
     - name: Validate Files
       run: |
-        # Syntax check for Python files
         find . -name '*.py' -exec python -m py_compile {} \;
-        # Syntax check for Bash files
         find . -name '*.sh' -exec bash -n {} \;
 
     - name: Check for Sensitive Data
       run: |
-        # Check for accidental exposure of sensitive data
         git grep -E 'api_key|secret|password|token'
 
-    - name: List Directory Contents
+    - name: List Directory Contents Before Compression
       run: ls -al
 
     - name: Compress Files
