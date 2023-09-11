@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
     - name: Validate Files
       run: |
@@ -26,9 +27,8 @@ jobs:
         # Check for accidental exposure of sensitive data
         git grep -E 'api_key|secret|password|token'
 
-    - name: List Recently Modified Files
-      run: |
-       find . -type f -newermt '1 minute ago' -print
+    - name: List Directory Contents
+      run: ls -al
 
     - name: Compress Files
       run: tar --dereference --warning=no-file-changed -czvf archive.tar.gz --exclude=.git* --exclude=.github*
