@@ -31,8 +31,8 @@ jobs:
         echo "Listing Directory Contents:"
         ls -al
 
-    - name: Compress Files
-      run: tar --dereference --warning=no-file-changed -czvf archive.tar.gz --exclude=.git* --exclude=.github*
+    - name: Compress Files using zip
+      run: zip -r archive.zip /home/runner/work/nas/nas -x "*.git*" "*.github*"
 
     - name: Upload to Archive
       run: |
