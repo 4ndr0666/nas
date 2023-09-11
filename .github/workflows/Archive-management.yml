@@ -1,3 +1,6 @@
+# Archive Management Workflow
+# This workflow is designed for a private repository to manage file archiving.
+
 name: Archive Management
 
 on:
@@ -12,18 +15,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # Note: To ensure you're using the latest versions of all actions,
+    # specify the major version only (e.g., @v2, @v3).
+
+    # Checkout the repository
     - name: Checkout Repository
       uses: actions/checkout@v3
 
+    # Install Node.js for stylelint
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    # Install stylelint
+    - name: Install stylelint
+      run: npm install -g stylelint
+
+    # Validate Python, Bash, and CSS files
     - name: Validate Files
       run: |
         find . -name '*.py' -exec python -m py_compile {} \;
         find . -name '*.sh' -exec bash -n {} \;
+        find . -name '*.css' -exec stylelint {} \;
 
+    # Check for sensitive data exposure
     - name: Check for Sensitive Data
       run: |
         git grep -E 'api_key|secret|password|token'
 
+    # Debugging Information
     - name: Debugging Information
       run: |
         echo "Current Working Directory:"
@@ -31,9 +52,11 @@ jobs:
         echo "Listing Directory Contents:"
         ls -al
 
+    # Compress files using 'zip'
     - name: Compress Files using zip
       run: zip -r archive.zip /home/runner/work/nas/nas -x "*.git*" "*.github*"
 
+    # Placeholder for uploading compressed files
     - name: Upload to Archive
       run: |
         # Placeholder for uploading compressed files
