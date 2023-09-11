@@ -26,10 +26,14 @@ jobs:
         # Check for accidental exposure of sensitive data
         git grep -E 'api_key|secret|password|token'
 
-#    - name: Compress Files
-#     run: |
-#        # Compress files into a TAR.GZ archive, including files pointed by symbolic links
-#        tar --dereference --warning=no-file-changed -czvf archive.tar.gz .
+    - name: List Recently Modified Files
+      run: |
+       find . -type f -newermt '1 minute ago' -print
+
+    - name: Compress Files
+      run: |
+        tar --dereference --warning=no-file-changed -czvf archive.tar.gz .
+
 
     - name: Upload to Archive
       run: |
