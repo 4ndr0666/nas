@@ -1,0 +1,4 @@
+conky -c /home/mabox/.config/conky/mabox_tools_mbcolor.conkyrc & sleep .5
+conky -c /home/mabox/.config/conky/Network_mbcolor.conkyrc & sleep .5
+conky -c /home/mabox/.config/conky/mount_points_mbcolor.conkyrc & sleep .5
+conky -c /home/mabox/.config/conky/shortcuts_mbcolor.conkyrc & sleep .5
