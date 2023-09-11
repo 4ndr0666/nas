@@ -24,8 +24,12 @@ jobs:
       run: |
         git grep -E 'api_key|secret|password|token'
 
-    - name: List Directory Contents Before Compression
-      run: ls -al
+    - name: Debugging Information
+      run: |
+        echo "Current Working Directory:"
+        pwd
+        echo "Listing Directory Contents:"
+        ls -al
 
     - name: Compress Files
       run: tar --dereference --warning=no-file-changed -czvf archive.tar.gz --exclude=.git* --exclude=.github*
