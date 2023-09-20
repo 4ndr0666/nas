@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+## ---colors-dark.sh
 # Color files
 PFILE="$HOME/.config/polybar/hack/colors.ini"
 RFILE="$HOME/.config/polybar/hack/scripts/rofi/colors.rasi"
