@@ -1,8 +1,0 @@
-<b>Collection name: 4ndr0666</b>	
-Saved: Thu Aug 10 08:59:13 PM CDT 2023
-
-Wallpaper saved by Nitrogen:\n/usr/share/backgrounds/Micro-mabox.jpg;\n
-Openbox theme:  MBcolors\n
-GTK theme:  Matcha-dark-sea\n
-Runninig Conky:\t\n\t/home/mabox/.config/conky/mabox_tools_mbcolor.conkyrc;\n\t/home/mabox/.config/conky/Network_mbcolor.conkyrc;\n\t/home/mabox/.config/conky/mount_points_mbcolor.conkyrc;\n\t/home/mabox/.config/conky/shortcuts_mbcolor.conkyrc;\n
-Running Tint2s:\t\n\t/home/mabox/.config/tint2/gruvbox.tint2rc\n
