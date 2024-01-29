@@ -1,0 +1,16 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+	"variables":
+	{
+		"pink": "#f5f5f5",
+		"purple": "#f5f5f5",
+		"--cyanish": "#f5f5f5"
+	},
+	"globals":
+	{
+	},
+	"rules":
+	[
+		
+	]
+}
