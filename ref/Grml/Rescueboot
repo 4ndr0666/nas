@@ -1,0 +1,3 @@
+> Place your favourite grml iso image(s) in /boot/grml/    <
+> To have them added to grub automatically, run            <
+>   grub-mkconfig -o /boot/grub/grub.cfg                   <

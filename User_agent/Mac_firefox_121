@@ -1,0 +1,19 @@
+
+Tested @ortiza5 suggestion and it works. I installed https://chromewebstore.google.com/detail/user-agent-switcher/kchfmpdcejfkipopnolndinkeoipnoia
+
+But by default you only have Firefox 33, which will trigger a message from Google Docs that your browser is no longer compatible.
+
+Go to the User Agent Switcher extension options, in the Custom User Agents tab, and add a more recent custom user agent. For example:
+New User-agent name: Mac Firefox 121
+New User-Agent String: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0
+Indicator Flag: FFM
+Then click the Add button.
+
+Stay in the extension options, go to Permanent Spoof List tab, and add the Google Docs domain:
+Domain: docs.google.com
+User-Agent String: Mac Firefox 121 (or the user agent you added on step 1)
+Then click the Add button.
+
+Now when you'll go open a doc at https://docs.google.com/document/ or a spreadsheet at https://docs.google.com/spreadsheets/ User Agent Switcher will trigger the Firefox user agent. But it will remain the default Chrome user agent for all other websites.
+
+And images in Google Docs no longer show inverted colors when Dark Reader is on.
