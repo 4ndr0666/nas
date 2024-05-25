@@ -1,0 +1,21 @@
+No.,Query,Description
+1,YouTube Enhancer,Search for scripts specifically designed to enhance YouTube's functionality and user experience.
+2,"ad blocker",Search for scripts explicitly labeled as "ad blocker" to help users block advertisements.
+3,Facebook & dark mode,Find scripts that enable dark mode specifically for Facebook, enhancing nighttime browsing.
+4,"Twitch | Mixer",Search for scripts applicable to either Twitch or Mixer, supporting streaming enhancements.
+5,Instagram !analytics,Find scripts for Instagram that do not include analytics features, focusing on other functionalities.
+6,"video download"~3,Search for scripts related to video downloading where 'video' and 'download' are within 3 words of each other.
+7,"@description (auto clicker)",Search for scripts described as "auto clicker," which automate clicking actions within browsers.
+8,auto*,Search for any scripts starting with "auto," such as automation tools like auto-fill or auto-refresh.
+9,"game cheat enhancement"/2,Look for gaming-related scripts where at least two of the words 'game', 'cheat', or 'enhancement' appear.
+10,"@(name,description) (speed | hack)",Find scripts where either 'speed' or 'hack' features are mentioned in the name or description, common in gaming mods.
+11,"@(tags,description) (script & "user friendly") | "quick setup"~5",Search for scripts both tagged as 'user friendly' and described as 'script', or where 'quick' and 'setup' are within 5 words of each other.
+12,"@downloads [1000 TO 5000]",Search for scripts that have been downloaded between 1,000 and 5,000 times, indicating moderate popularity.
+13,customization & @sort: updates desc,Find scripts offering customization options, sorted by the number of updates in descending order for freshness.
+14,"@updated [20200101 TO 20201231]",Search for scripts updated within the year 2020, ensuring the script's currency and relevance.
+15,"@(title,body) (error handling & robust) | "efficient coding"~10",Search for scripts focusing on 'error handling' and 'robust' solutions in the title or body, or where 'efficient' and 'coding' are within 10 words of each other in the description.
+16,"@language (Python)",Search for scripts specifically written in Python, useful for developers looking for Python-based tools.
+17,"@compatibility (Chrome | Firefox)",Find scripts compatible with either Chrome or Firefox browsers, focusing on cross-browser functionalities.
+18,theme change & user experience,Search for scripts that offer theme changing capabilities and enhance user experience.
+19,"auto login"~2 & secure,Search for scripts dealing with secure auto login features, where 'auto' and 'login' are within 2 words of each other and include security enhancements.
+20,feature-rich & @sort: popularity desc,Find scripts that are feature-rich and sort them by popularity in descending order to see the most used ones.
