@@ -1,0 +1,44 @@
+{
+  "user_agents": [
+    {
+      "browser": "Edge",
+      "platform": "Windows",
+      "ua_string": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.2849.68"
+    },
+    {
+      "browser": "Internet Explorer",
+      "platform": "Windows",
+      "ua_string": "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "Windows (Win64; x64)",
+      "ua_string": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "Windows (WOW64)",
+      "ua_string": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "Windows",
+      "ua_string": "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+    },
+    {
+      "browser": "Firefox",
+      "platform": "Windows",
+      "ua_string": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0"
+    },
+    {
+      "browser": "Vivaldi",
+      "platform": "Windows (WOW64)",
+      "ua_string": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Vivaldi/7.0.3495.10"
+    },
+    {
+      "browser": "Vivaldi",
+      "platform": "Windows (Win64; x64)",
+      "ua_string": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Vivaldi/7.0.3495.10"
+    }
+  ]
+}

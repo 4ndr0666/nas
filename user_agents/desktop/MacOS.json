@@ -1,0 +1,29 @@
+{
+  "user_agents": [
+    {
+      "browser": "Safari",
+      "platform": "macOS",
+      "ua_string": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15"
+    },
+    {
+      "browser": "Firefox",
+      "platform": "macOS",
+      "ua_string": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14.7; rv:132.0) Gecko/20100101 Firefox/132.0"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "macOS",
+      "ua_string": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+    },
+    {
+      "browser": "Vivaldi",
+      "platform": "macOS",
+      "ua_string": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Vivaldi/7.0.3495.10"
+    },
+    {
+      "browser": "Edge",
+      "platform": "macOS",
+      "ua_string": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.2849.68"
+    }
+  ]
+}

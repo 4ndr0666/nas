@@ -1,0 +1,34 @@
+{
+  "user_agents": [
+    {
+      "browser": "Chrome",
+      "platform": "ChromeOS x86_64",
+      "ua_string": "Mozilla/5.0 (X11; CrOS x86_64 15917.71.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.132 Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "ChromeOS armv7l",
+      "ua_string": "Mozilla/5.0 (X11; CrOS armv7l 15917.71.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.132 Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "ChromeOS aarch64",
+      "ua_string": "Mozilla/5.0 (X11; CrOS aarch64 15917.71.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.132 Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "ChromeOS x86_64",
+      "ua_string": "Mozilla/5.0 (X11; CrOS x86_64 15917.71.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.132 Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "ChromeOS armv7l",
+      "ua_string": "Mozilla/5.0 (X11; CrOS armv7l 15917.71.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.132 Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "ChromeOS aarch64",
+      "ua_string": "Mozilla/5.0 (X11; CrOS aarch64 15917.71.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.132 Safari/537.36"
+    }
+  ]
+}

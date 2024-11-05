@@ -1,0 +1,54 @@
+{
+  "user_agents": [
+    {
+      "browser": "Chrome",
+      "platform": "Android 15",
+      "ua_string": "Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.86 Mobile Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "Android 15; SM-A205U",
+      "ua_string": "Mozilla/5.0 (Linux; Android 15; SM-A205U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.86 Mobile Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "Android 15; SM-A102U",
+      "ua_string": "Mozilla/5.0 (Linux; Android 15; SM-A102U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.86 Mobile Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "Android 15; SM-G960U",
+      "ua_string": "Mozilla/5.0 (Linux; Android 15; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.86 Mobile Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "Android 15; SM-N960U",
+      "ua_string": "Mozilla/5.0 (Linux; Android 15; SM-N960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.86 Mobile Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "Android 15; LM-Q720",
+      "ua_string": "Mozilla/5.0 (Linux; Android 15; LM-Q720) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.86 Mobile Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "Android 15; LM-X420",
+      "ua_string": "Mozilla/5.0 (Linux; Android 15; LM-X420) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.86 Mobile Safari/537.36"
+    },
+    {
+      "browser": "Chrome",
+      "platform": "Android 15; LM-Q710(FGN)",
+      "ua_string": "Mozilla/5.0 (Linux; Android 15; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.86 Mobile Safari/537.36"
+    },
+    {
+      "browser": "Firefox",
+      "platform": "Android 15",
+      "ua_string": "Mozilla/5.0 (Android 15; Mobile; rv:68.0) Gecko/68.0 Firefox/132.0"
+    },
+    {
+      "browser": "Firefox",
+      "platform": "Android 15; LG-M255",
+      "ua_string": "Mozilla/5.0 (Android 15; Mobile; LG-M255; rv:132.0) Gecko/132.0 Firefox/132.0"
+    }
+  ]
+}
