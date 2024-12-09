@@ -1,0 +1,6 @@
+Comfortaa
+IBM-Plex-Mono
+Iosevka
+IosevkaCustom
+JetBrainsMono
+Typewriter

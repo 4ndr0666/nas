@@ -1,1 +1,0 @@
-GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 sysrq_always_enabled=1 systemd.unified_cgroup_hierarchy=1 splash disable_ipv6=1 ipv6.autoconf=0 accept_ra=0 mitigations=auto transparent_hugepage=always intel_pstate=enable fsck.repair=yes rootflags=subvol=/@ scsi_mod.use_blk_mq=1 iommu=pt zswap.enabled=1"

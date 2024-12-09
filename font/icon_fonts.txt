@@ -1,0 +1,11 @@
+archcraft
+google-mdi
+Icomoon-Feather
+MaterialIconsOutlined-Regular
+MaterialIconsRound-Regular
+MaterialIconsTwoTone-Regular
+Siji
+Symbols-1000-em Nerd Font Complete
+Symbols-2048-em Nerd Font Complete
+typicons
+Waffle
