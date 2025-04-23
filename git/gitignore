@@ -3,6 +3,7 @@ secrets.json
 *.env
 
 ## Editor and Shell
+.p10k.zsh
 .zcompdump
 .bash_history
 .zsh_history
