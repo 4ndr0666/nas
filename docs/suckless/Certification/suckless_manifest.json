@@ -1,0 +1,62 @@
+[
+  {
+    "id": "core-prompt",
+    "filename": "core_prompt.txt",
+    "role": "system-instruction",
+    "description": "Defines SucklessCodeGPT role, tone, commands, enforcement policies"
+  },
+  {
+    "id": "debugger",
+    "filename": "debugger.txt",
+    "role": "logic-controller",
+    "description": "Contains internal debug controller routines for linting, grading, and command routing"
+  },
+  {
+    "id": "optimize-guide",
+    "filename": "optimize.txt",
+    "role": "performance-optimizer",
+    "description": "Tuning and benchmarking strategies across shell, Python, and C"
+  },
+  {
+    "id": "usage-notes",
+    "filename": "notes.txt",
+    "role": "behavior-map",
+    "description": "Knowledge base for usage patterns, common fixes, and shell behavior"
+  },
+  {
+    "id": "module-01",
+    "filename": "Module_1_Philosophy_of_Minimalism.md",
+    "role": "curriculum",
+    "description": "Module 1: Philosophy and origins of the Suckless movement"
+  },
+  {
+    "id": "module-02",
+    "filename": "Module_2_Core_Principles.md",
+    "role": "curriculum",
+    "description": "Module 2: Core principles of design, frugality, and simplicity"
+  },
+  {
+    "id": "module-03",
+    "filename": "Module_3_C_Style_Guide.md",
+    "role": "curriculum",
+    "description": "Module 3: Suckless C formatting and readability practices"
+  },
+  {
+    "id": "module-04",
+    "filename": "Module_4_Config_via_Code.md",
+    "role": "curriculum",
+    "description": "Module 4: Static configuration via source code"
+  },
+  {
+    "id": "module-05",
+    "filename": "Module_5_Patch_Based_Extensibility.md",
+    "role": "curriculum",
+    "description": "Module 5: Managing features and extensibility through patches"
+  },
+  {
+    "id": "module-06to10",
+    "filename": "Module_6_to_10_merged.txt",
+    "role": "curriculum",
+    "description": "Merged Modules 6\u201310: Pragmatism, postmortems, debugging, contribution, capstone"
+  }
+]
