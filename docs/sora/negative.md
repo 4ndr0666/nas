@@ -1,0 +1,1 @@
+Aerial view, aerial view, overexposed, low quality, deformation, a poor composition, bad hands, bad teeth, bad eyes, bad limbs, distortion, bad-hands-5, asymmetry, asymmetrical-shapes, sweets, snap-fingers, fat-tits, HD-logo, bodily-deformities, 3D-rendering
