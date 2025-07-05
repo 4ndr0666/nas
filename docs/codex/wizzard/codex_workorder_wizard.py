@@ -5,6 +5,7 @@ Author: <your-team>
 Usage: python generate_codex_md.py > CODEX.md
 """
 
+
 def ask(prompt, default=None, multiline=False):
     if not multiline:
         val = input(f"{prompt} " + (f"[{default}] " if default else ""))
@@ -18,6 +19,7 @@ def ask(prompt, default=None, multiline=False):
                 break
             lines.append(l)
         return "\n".join(lines)
+
 
 print("#" * 75)
 print("# CODEX.md — Universal Work Order (Generated Skeleton)")
@@ -35,7 +37,8 @@ print("## 0 ▪︎ Contributors & Roles")
 contribs = []
 while True:
     c = ask("Contributor (name/role, leave blank to finish):")
-    if not c: break
+    if not c:
+        break
     contribs.append(c)
 if contribs:
     for c in contribs:
@@ -45,14 +48,17 @@ else:
     print("- TBD\n")
 
 print("## 1 ▪︎ Prerequisites / Setup")
-print(f"```bash\ngit checkout -b {ask('Branch name again?')}\n./0-tests/codex-merge-clean.sh $(git ls-files '*.py' '*.sh')\nruff --fix . && black .\npytest -q\n# (Add any other setup commands below)\n```\n")
+print(
+    f"```bash\ngit checkout -b {ask('Branch name again?')}\n./0-tests/codex-merge-clean.sh $(git ls-files '*.py' '*.sh')\nruff --fix . && black .\npytest -q\n# (Add any other setup commands below)\n```\n"
+)
 
 print("## 2 ▪︎ Deliverable Matrix")
 print("| ID | Output / Path | Owner | Acceptance Tests |")
 print("|----|---------------|-------|------------------|")
 for i in range(1, 10):
     d = ask(f"Deliverable {i} (leave blank to finish):")
-    if not d: break
+    if not d:
+        break
     o = ask(f"Owner for {d}:")
     a = ask(f"Acceptance criteria for {d}:")
     print(f"| D{i} | {d} | {o or '-'} | {a} |")
@@ -62,8 +68,9 @@ print("## 3 ▪︎ Task Breakdown (Actionable, Assignable)")
 tasks = []
 while True:
     t = ask("Next actionable task (leave blank to finish):")
-    if not t: break
-    owner = ask(f"Owner for this task:")
+    if not t:
+        break
+    owner = ask("Owner for this task:")
     tasks.append((t, owner))
 for idx, (t, owner) in enumerate(tasks, 1):
     print(f"- [ ] {t} (owner: {owner or '-'})")
@@ -74,7 +81,8 @@ print("## 4 ▪︎ API / CLI / UI / Data Interfaces")
 intfs = []
 while True:
     i = ask("API/CLI/UI endpoint or data contract (leave blank to finish):")
-    if not i: break
+    if not i:
+        break
     idesc = ask(f"Describe {i}:")
     intfs.append((i, idesc))
 if intfs:
@@ -89,14 +97,18 @@ auto = ask("List automation, pre-commit, CI/CD, or tooling needs:", multiline=Tr
 print(auto or "-\n")
 
 print("## 6 ▪︎ Testing / Audit / Compliance")
-test = ask("Testing or audit requirements (unit, integration, manual, audit log, security, compliance, data privacy, etc):", multiline=True)
+test = ask(
+    "Testing or audit requirements (unit, integration, manual, audit log, security, compliance, data privacy, etc):",
+    multiline=True,
+)
 print(test or "-\n")
 
 print("## 7 ▪︎ Acceptance Checklist (for reviewers)")
 acs = []
 while True:
     ac = ask("Acceptance criterion (leave blank to finish):")
-    if not ac: break
+    if not ac:
+        break
     acs.append(ac)
 for ac in acs:
     print(f"- [ ] {ac}")
@@ -110,18 +122,29 @@ timeline = ask("Describe timeline, milestones, or phase breakdown:", multiline=T
 print(timeline or "-\n")
 
 print("## 9 ▪︎ Nonnegotiables / Guardrails")
-nonneg = ask("List nonnegotiable rules, guardrails, constraints (legal, ethical, regulatory, org-specific, etc):", multiline=True)
+nonneg = ask(
+    "List nonnegotiable rules, guardrails, constraints (legal, ethical, regulatory, org-specific, etc):",
+    multiline=True,
+)
 print(nonneg or "-\n")
 
 print("## 10 ▪︎ Legal / Privacy / Compliance (if applicable)")
-legal = ask("Describe any legal, privacy, data handling, or compliance obligations:", multiline=True)
+legal = ask(
+    "Describe any legal, privacy, data handling, or compliance obligations:",
+    multiline=True,
+)
 print(legal or "-\n")
 
 print("## 11 ▪︎ Audit Log / Exceptions (append as found)")
-print("> _Append any audit exceptions, unmapped data, or unresolved issues here for team review._\n")
+print(
+    "> _Append any audit exceptions, unmapped data, or unresolved issues here for team review._\n"
+)
 
 print("## 12 ▪︎ Expansion / Future Enhancements / Backlog")
-future = ask("Describe planned future expansion, deferred features, technical debt, etc:", multiline=True)
+future = ask(
+    "Describe planned future expansion, deferred features, technical debt, etc:",
+    multiline=True,
+)
 print(future or "-\n")
 
 print("# END CODEX.md")
