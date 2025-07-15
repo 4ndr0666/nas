@@ -1,0 +1,153 @@
+#!/usr/bin/env bash
+# ──────────────────────────────────────────────────────────────────────────────
+#  Pixverse++ • Universal Dev-Env Bootstrap
+#  Author : 4ndr0666   ·   License : MIT
+# ──────────────────────────────────────────────────────────────────────────────
+set -euo pipefail
+IFS=$'\n\t'
+
+# ────────────  Logging helpers  ────────────
+bold=$'\e[1m'; red=$'\e[31m'; grn=$'\e[32m'; yel=$'\e[33m'; rst=$'\e[0m'
+info () { printf '%sINFO%s  %s\n'  "$grn" "$rst" "$*"; }
+warn () { printf '%sWARN%s  %s\n'  "$yel" "$rst" "$*" >&2; }
+fatal() { printf '%sERROR%s %s\n' "$red" "$rst" "$*" >&2; exit 1; }
+
+# ────────────  Constants  ────────────
+PYTHON_VERSION="${PYTHON_VERSION:-3.11.12}"
+VENV_DIR="${VENV_DIR:-.venv-codex}"
+export PYENV_ROOT="${PYENV_ROOT:-$HOME/.pyenv}"
+export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:$PATH"
+
+# ────────────  Sudo & PM detection  ────────────
+SUDO='' ; command -v sudo &>/dev/null && SUDO='sudo'
+
+detect_pm() {
+  for c in apt-get dnf yum pacman apk zypper brew; do
+    command -v "$c" &>/dev/null && { echo "$c"; return; }
+  done
+  fatal "No supported package manager found."
+}
+PM=$(detect_pm)
+
+# Package-name shims (fd-find vs fd, etc.)
+pkg() {
+  local base=$1
+  case "$PM:$base" in
+    apt-get:fd)    echo fd-find ;;
+    apt-get:bats)  echo bats ;;
+    pacman:fd)     echo fd ;;
+    brew:fd)       echo fd ;;
+    *)             echo "$base" ;;
+  esac
+}
+
+# ────────────  Helper : mass install  ────────────
+install_pkgs() {
+  [[ $# -eq 0 ]] && return
+  case $PM in
+    apt-get)
+      info "apt-get update …"
+      $SUDO apt-get -qq update
+      info "Installing: $*"
+      $SUDO apt-get -qq install -y "$@"
+      ;;
+    dnf|yum)
+      $SUDO "$PM" install -y "$@"
+      ;;
+    pacman)
+      $SUDO pacman -Sy --noconfirm --needed "$@"
+      ;;
+    apk)
+      $SUDO apk add --no-cache "$@"
+      ;;
+    zypper)
+      $SUDO zypper --non-interactive install "$@"
+      ;;
+    brew)
+      brew install "$@" || true         # brew never with sudo
+      ;;
+  esac
+}
+
+# ────────────  pyenv (auto-install if missing)  ────────────
+if ! command -v pyenv &>/dev/null; then
+  info "pyenv not found → Installing locally…"
+  curl -fsSL https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+  export PATH="$PYENV_ROOT/bin:$PATH"
+fi
+eval "$(pyenv init -)" 2>/dev/null || true
+
+if ! pyenv versions --bare | grep -qxF "$PYTHON_VERSION"; then
+  info "Installing Python $PYTHON_VERSION via pyenv…"
+  pyenv install -s "$PYTHON_VERSION"
+fi
+pyenv global "$PYTHON_VERSION"
+pyenv rehash
+
+# ────────────  System python fallback  ────────────
+if ! command -v python &>/dev/null; then
+  info "Installing system Python…"
+  install_pkgs python3 python3-venv python3-pip
+  ln -sf "$(command -v python3)" "$HOME/.local/bin/python"
+fi
+PYTHON_BIN="$(command -v python)"
+
+# ────────────  Virtual-env  ────────────
+if [[ -z "${VIRTUAL_ENV:-}" ]]; then
+  [[ ! -d "$VENV_DIR" ]] && { info "Creating venv → $VENV_DIR" ; "$PYTHON_BIN" -m venv "$VENV_DIR"; }
+  # shellcheck disable=SC1090
+  source "$VENV_DIR/bin/activate"
+fi
+
+pip install --upgrade pip wheel >/dev/null
+
+PY_PKGS=(
+  black bandit ruff pyright flake8 isort mypy pytest
+  pipx mdformat proselint pre-commit pyyaml
+)
+info "Ensuring core Python packages…"
+pip install --disable-pip-version-check -q "${PY_PKGS[@]}"
+
+# ────────────  pipx / yq  ────────────
+pipx ensurepath 2>/dev/null || true
+hash -r
+command -v yq &>/dev/null || pipx install yq
+
+# ────────────  Shell & CLI tools  ────────────
+install_pkgs "$(pkg shellcheck)" "$(pkg shfmt)"
+if ! command -v bats &>/dev/null; then
+  info "Installing bats-core…"
+  git clone --depth 1 https://github.com/bats-core/bats-core.git /tmp/bats-core
+  /tmp/bats-core/install.sh --prefix "$HOME/.local" >/dev/null
+  rm -rf /tmp/bats-core
+fi
+
+CLI_TOOLS=( jq ripgrep fzf yamllint hyperfine scdoc )
+# fd : different names per distro
+CLI_TOOLS+=( "$(pkg fd)" )
+install_pkgs "${CLI_TOOLS[@]}"
+
+# create fd symlink for Debian
+if command -v fd-find &>/dev/null && ! command -v fd &>/dev/null; then
+  $SUDO ln -sf "$(command -v fd-find)" /usr/local/bin/fd
+fi
+
+# ────────────  Node global utilities  ────────────
+if command -v npm &>/dev/null; then
+  NODE_PKGS=( bash-language-server remark-cli write-good npm-check-updates markdownlint-cli yaml-lint editorconfig-checker )
+  for p in "${NODE_PKGS[@]}"; do
+    npm list -g "$p" --depth=0 >/dev/null 2>&1 || npm install -g "$p"
+  done
+fi
+
+# ────────────  Done  ────────────
+cat <<EOF
+${grn}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${rst}
+🎉  ${bold}Environment ready${rst}
+
+• venv          : ${bold}$VENV_DIR${rst}
+• Python        : $(python --version 2>&1)
+• Tool counts   : Python($((${#PY_PKGS[@]})))  Node($(command -v npm &>/dev/null && echo ✓ || echo ✗))  CLI($((${#CLI_TOOLS[@]})))
+• Activate with : ${bold}source $VENV_DIR/bin/activate${rst}
+${grn}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${rst}
+EOF
