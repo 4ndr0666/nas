@@ -15,8 +15,8 @@ fatal() { printf '%sERROR%s %s\n' "$red" "$rst" "$*" >&2; exit 1; }
 # ────────────  Constants  ────────────
 PYTHON_VERSION="${PYTHON_VERSION:-3.11.12}"
 VENV_DIR="${VENV_DIR:-.venv-codex}"
-export PYENV_ROOT="${PYENV_ROOT:-$HOME/.pyenv}"
-export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:$PATH"
+export PYENV_ROOT="${PYENV_ROOT:-/workspace/.pyenv}"
+export PATH="$PYENV_ROOT/bin:/workspace/.local/bin:$PATH"
 
 # ────────────  Sudo & PM detection  ────────────
 SUDO='' ; command -v sudo &>/dev/null && SUDO='sudo'
@@ -36,7 +36,6 @@ pkg() {
     apt-get:fd)    echo fd-find ;;
     apt-get:bats)  echo bats ;;
     pacman:fd)     echo fd ;;
-    brew:fd)       echo fd ;;
     *)             echo "$base" ;;
   esac
 }
@@ -51,20 +50,11 @@ install_pkgs() {
       info "Installing: $*"
       $SUDO apt-get -qq install -y "$@"
       ;;
-    dnf|yum)
-      $SUDO "$PM" install -y "$@"
-      ;;
     pacman)
       $SUDO pacman -Sy --noconfirm --needed "$@"
       ;;
     apk)
       $SUDO apk add --no-cache "$@"
-      ;;
-    zypper)
-      $SUDO zypper --non-interactive install "$@"
-      ;;
-    brew)
-      brew install "$@" || true         # brew never with sudo
       ;;
   esac
 }
@@ -88,7 +78,7 @@ pyenv rehash
 if ! command -v python &>/dev/null; then
   info "Installing system Python…"
   install_pkgs python3 python3-venv python3-pip
-  ln -sf "$(command -v python3)" "$HOME/.local/bin/python"
+  ln -sf "$(command -v python3)" "/workspace/.local/bin/python"
 fi
 PYTHON_BIN="$(command -v python)"
 
@@ -118,7 +108,7 @@ install_pkgs "$(pkg shellcheck)" "$(pkg shfmt)"
 if ! command -v bats &>/dev/null; then
   info "Installing bats-core…"
   git clone --depth 1 https://github.com/bats-core/bats-core.git /tmp/bats-core
-  /tmp/bats-core/install.sh --prefix "$HOME/.local" >/dev/null
+  /tmp/bats-core/install.sh --prefix "/workspace/.local" >/dev/null
   rm -rf /tmp/bats-core
 fi
 
