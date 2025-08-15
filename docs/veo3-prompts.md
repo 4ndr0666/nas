@@ -1,4 +1,4 @@
-# Prompts
+# Veo3 Prompts
 
 1. **Trampoline**:
    >Nighttime backyard with a large trampoline in the center, surrounded by tall trees and a wooden fence. The woman is energetically jumping and bouncing on the trampoline, her garments moving naturally with each bounce. Soft warm lighting from a garden light illuminates the scene, creating a cozy night atmosphere. Smooth camera panning, realistic shadows and natural human movements.
@@ -15,4 +15,7 @@
 
 ---
 
-4. 
+4. **Jogging Toward Camera**:
+   >First-person GoPro view jogging through {{environment}} at dawn, as playful {{subject}} runs beside the camera waving; hyper-real foliage, soft god-rays, warm morning birdsong, light footstep foley; 8-second continuous take, 4-K, 30 fps.
+
+---
