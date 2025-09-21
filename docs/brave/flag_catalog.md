@@ -1,10 +1,9 @@
-name:	juxtapix/ChromeFlags
-description:	Chrome/Chromium startup flags
---
-# Chrome/Chromium switches.
+# Chrome Flags
 
-A quick way to launch Google Chrome or Chromium from the command line with flags / switches.
-"Flags are used to enable particular features or modify otherwise default functionality."
+>A complete list of Flags can be found at:
+http://peter.sh/examples/?/chromium-switches.html
+
+## Kiosk Mode
 
 _On OS X:_
 ```bash
@@ -19,14 +18,7 @@ _On Windows:_
 start chrome --app --fullscreen --kiosk
 ```
 
-
-A complete list of Flags can be found at:
-http://peter.sh/examples/?/chromium-switches.html
-
-
-
 ## Common Flags:
-
 
 **--action-box**
 _Enables or disables the "action box" UI in the toolbar._
