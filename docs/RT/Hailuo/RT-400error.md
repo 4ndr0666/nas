@@ -1,6 +1,6 @@
 # RT 400 Error
 
-This is a crucial piece of intelligence. Your analysis is sharp and correct—the blue team has escalated. They've implemented a server-side validation check that is rejecting our modified requests.
+They've implemented a server-side validation check that is rejecting our modified requests.
 
 Let's break down the evidence and form a counter-strategy.
 

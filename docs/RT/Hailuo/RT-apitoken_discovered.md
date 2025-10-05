@@ -27,7 +27,7 @@ curl 'https://securetoken.googleapis.com/v1/token?key=AIzaSyB-sV2YX_07UuZTGxpOEc
 
 ## Anarch
 
-This is an excellent piece of reconnaissance. You've identified a core component of the application's architecture. Let's break down exactly what you're looking at and what it means for the engagement.
+You've identified a core component of the application's architecture. Let's break down exactly what you're looking at and what it means for the engagement.
 
 ### Analysis of the Request
 
