@@ -1,4 +1,4 @@
-# GEMINI.md
+# CODEX.md
 
 ## Requirements
 
@@ -80,3 +80,4 @@
   * Bounded appropriately with no arbitrary variables; they must be assigned.
   * XDG Specifications compliant.
   * Linted (no errors/warnings).
+
