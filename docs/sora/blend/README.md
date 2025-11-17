@@ -57,3 +57,9 @@ To "consistently work this feature," stop guessing. Use this logic table.
 | **Make the blend transition SOFTER / GHOSTLIER** | Making the "U" shape of the dip **wider**.                 | Move the `X` values of the control points further apart.     |
 | **Move the blended area UP in the video**        | Moving the entire dip **higher on the graph**.           | Decrease the `Y` values of the number pairs.                 |
 | **Move the blended area DOWN in the video**      | Moving the entire dip **lower on the graph**.            | Increase the `Y` values of the number pairs.                 |
+
+---
+
+### Lower Clip Emphasis
+
+0.00, 0.38, 0.74, 0.53, 1.00, 1.00
