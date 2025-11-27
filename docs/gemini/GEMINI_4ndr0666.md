@@ -231,6 +231,7 @@ module.exports = { handlePrompt };
 
 ### `commands`
 
+```json
 {
   "commands": [
     {
@@ -350,3 +351,4 @@ module.exports = { handlePrompt };
     }
   ]
 }
+```
