@@ -1,0 +1,18 @@
+# Codex Environment Initialization Script
+# Ensures JS environment mimics TamperMonkey sandbox and provides necessary globals
+
+export CODENAME="LinkMasterΨ2-Enhancer"
+export NODE_ENV=production
+export GM_XHR=true
+export GM_DOWNLOAD=true
+export GM_CLIPBOARD=true
+
+# Install dependencies if not already present
+npm install tippy.js jszip file-saver sha256 m3u8-parser
+
+# Optional: Preload resolver libraries for Codex memory persistence
+curl -s https://raw.githubusercontent.com/geraintluff/sha256/gh-pages/sha256.min.js -o ./lib/sha256.min.js
+curl -s https://cdn.jsdelivr.net/npm/m3u8-parser@4.7.1/dist/m3u8-parser.min.js -o ./lib/m3u8-parser.min.js
+
+# Launch Codex interpreter
+node codex-runner.js --project ./LinkMasterΨ2
