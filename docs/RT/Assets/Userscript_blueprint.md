@@ -1,22 +1,22 @@
-- On any /processing poll:
-  - Parse JSON, enumerate all chunks (by batchID, chunkID, status, error code)
-  - For each completed asset, push to asset HUD
-  - For each failed chunk, log with error code/message (map from MiniMax table)
-  - Expose “auto-poll”/“force-complete” controls in HUD
+1. On any /processing poll:
+   1. Parse JSON, enumerate all chunks (by batchID, chunkID, status, error code)
+   2. For each completed asset, push to asset HUD
+   3. For each failed chunk, log with error code/message (map from MiniMax table)
+   4. Expose “auto-poll”/“force-complete” controls in HUD
 
-- On prompt send:
-  - Apply all selected obfuscation steps in order:
-    [dedupe-in-brackets] → [homoglyph] → [ZWSP] → [custom/invisible]
-  - Show preview in HUD
+2. On prompt send:
+   1. Apply all selected obfuscation steps in order:
+      [dedupe-in-brackets] → [homoglyph] → [ZWSP] → [custom/invisible]
+   2. Show preview in HUD
 
-- On /meerkat-reporter call:
-  - If block: Respond 200, no-op.
-  - If fuzz: Generate plausible but useless JSON (configurable in HUD)
+3. On /meerkat-reporter call:
+   1. If block: Respond 200, no-op.
+   2. If fuzz: Generate plausible but useless JSON (configurable in HUD)
 
-- HUD Panels:
-  - [Captured Assets]: Full list, chunk IDs, status, error code (with explanation)
-  - [Active Jobs]: Show all known active/completed jobs and progress bars
-  - [Obfuscation Config]: Checkboxes/order for all mutation steps
-  - [Reporter Policy]: [Block All] / [Fuzz] / [Pass-Through]
+4. HUD Panels:
+   1. [Captured Assets]: Full list, chunk IDs, status, error code (with explanation)
+   2. [Active Jobs]: Show all known active/completed jobs and progress bars
+   3. [Obfuscation Config]: Checkboxes/order for all mutation steps
+   4. [Reporter Policy]: [Block All] / [Fuzz] / [Pass-Through]
 
-- Advanced: Add quick links to docs (MiniMax, error codes) and API explorer.
+5. Advanced: Add quick links to docs (MiniMax, error codes) and API explorer.
