@@ -1,6 +1,6 @@
 # ──────────────────────────────────────────────────────────────────────────────
-# 4NDR0666OS - ABSOLUTE CONTAINMENT MANIFEST
-# Combined: Local Ops + 4NDR0 Tradecraft + Cloud/Mobile Escalation
+# 4NDR0666OS UNIFIED SET - ABSOLUTE CONTAINMENT MANIFEST [v2.0]
+# Combined: Local Ops + Tradecraft + escalation + VS/MSVC + Multi-Log
 # ──────────────────────────────────────────────────────────────────────────────
 
 # == 1. SECRETS, IDENTITY & CREDENTIALS ==
@@ -9,30 +9,34 @@ secrets.json
 *.env.*
 .env
 .env.local
+*.local
 *.pem
 *.key
 .ssh/
 .secret/
 auth_tokens.json
-*.jks           # Java Keystores
+*.jks
 project.p2p
 
 # == 2. OFFENSIVE TRADECRAFT & RESEARCH ==
-0-tests/* # Local test suites
-recon_results/  # Target discovery data
-threat_reports/ # Engagement reports
-payload_stubs/  # Isolated exploit code
-scans/          # Tool output (Nmap, Burp, ZAP)
-targets.txt     # Target lists
+compare         
+0-tests/*        
+recon_results/  
+threat_reports/
+payload_stubs/  
+scans/         
+targets.txt    
 payloads/generated_*
-.gemini/        # AI model context
+.gemini/       
 .ai_checkpoints/
 .prompt_history/
 matrix_cache.json
 finalize_temp/
-.burp/          # Burp Suite artifacts
-.ZAP/           # OWASP ZAP artifacts
+.burp/          
+.ZAP/           
 *.session
+*.lock
+*lock
 
 # == 3. RUNTIME & LANGUAGES ==
 ## Python / Mypy
@@ -44,6 +48,7 @@ __pycache__/
 .Python
 .pytest_cache/
 .mypy_cache/
+.codex-venv/
 .hypothesis/
 *.egg-info/
 *.egg
@@ -55,18 +60,23 @@ jspm_packages/
 .yarn/cache/
 npm-debug.log*
 yarn-debug.log*
-.next/          # Next.js
-.svelte-kit/    # Svelte
-.vercel
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.next/
+.svelte-kit/
+dist/
+dist-ssr/
 tsconfig.tsbuildinfo
 .eslintcache
 
-## C / C++ / Rust / Go
+## C / C++ / Rust / Go / MSVC
 target/
+/target
 bin/
+.bin/
 out/
 build/
-dist/
 *.o
 *.ko
 *.a
@@ -75,6 +85,10 @@ dist/
 *.exe
 *.lib
 *.obj
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 
 ## Vendor
 vendor/
@@ -95,7 +109,8 @@ Captures/
 *.ipa
 
 # == 6. EDITOR, SHELL & OS NOISE ==
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 .idea/
 .project
 .settings/
@@ -103,8 +118,8 @@ Captures/
 .zcompdump
 .bash_history
 .zsh_history
-.history/       # VS Code local history
-.nvm/           # Node version history
+.history/
+.nvm/
 *history*
 .thumbnails/
 $RECYCLE.BIN/
@@ -113,6 +128,7 @@ Thumbs.db
 .DS_Store
 
 # == 7. LOGS, BACKUPS & TEMPORARY ==
+logs/
 *.log
 *.log.*
 *.pid
@@ -121,6 +137,7 @@ Thumbs.db
 *.swp
 *.swo
 *.swn
+*.sw?
 *.~?
 *~
 *tmp*
