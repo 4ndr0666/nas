@@ -28,6 +28,7 @@ scans/
 targets.txt    
 payloads/generated_*
 .gemini/       
+GEMINI.md
 .ai_checkpoints/
 .prompt_history/
 matrix_cache.json
@@ -35,6 +36,8 @@ finalize_temp/
 .burp/          
 .ZAP/           
 *.session
+*.lock
+*lock
 
 # == 3. RUNTIME & LANGUAGES ==
 ## Python / Mypy
@@ -70,7 +73,9 @@ tsconfig.tsbuildinfo
 
 ## C / C++ / Rust / Go / MSVC
 target/
+/target
 bin/
+.bin/
 out/
 build/
 *.o
@@ -160,3 +165,5 @@ logs/
 *.3gp
 *.flv
 *.webp
+*.deb
+*.rpm
