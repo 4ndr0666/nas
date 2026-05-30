@@ -72,7 +72,7 @@ Place the following configuration inside your production `mpv.conf` profile:
 user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
 # Overrides default cross-origin destination filtering
-http-header-fields="Origin: [https://bunkr.cr](https://bunkr.cr)"
+http-header-fields="Origin: https://bunkr.cr"
 
 # Note: NEVER define a static "referrer=" inside this configuration.
 # The referrer path string must change dynamically to match the current URL slug.
