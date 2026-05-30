@@ -65,7 +65,7 @@
 - **Non-Authoritative-Reason**: Indicates the reason a response was not authoritative (e.g., `Non-Authoritative-Reason: Hinted`).
 
 ### O
-- **Origin**: Indicates the origin of the cross-site request (e.g., `Origin: https://example.com`).
+- **Origin**: Indicates the origin of a cross-site request. Does not contain path variables; strictly outputs scheme, host, and port parameters to establish security relationships under the Same-Origin Policy (e.g., `Origin: https://bunkr.cr`).
 
 ### P
 - **Pragma**: Implementation-specific header that may have various effects along the request-response chain (e.g., `Pragma: no-cache`).
@@ -75,17 +75,18 @@
 - **Query**: Custom header often used in API requests to query information (e.g., `Query: keyword=something`).
 
 ### R
-- **Range**: Requests only part of an entity (e.g., `Range: bytes=500-999`).
-- **Referer**: The address of the previous web page from which a link to the currently requested page was followed (e.g., `Referer: http://www.example.com/`).
+- **Range**: Requests only a partial segment of an entity, enabling sequential buffering or download continuation (e.g., `Range: bytes=500-999`).
+- **Referer**: The address of the previous web page from which a link to the current resource was followed. In high-performance edge streaming architectures, validation engines heavily discriminate between root origin strings and granular explicit location paths to compute and verify cryptographic access token hashes (e.g., `Referer: https://bunkr.cr/v/eH2x75mqlFhkk`).
 - **Retry-After**: Indicates how long the user agent should wait before making a follow-up request (e.g., `Retry-After: 120`).
 
 ### S
-- **Sec-Fetch-Dest**: Indicates the request’s destination (e.g., `Sec-Fetch-Dest: document`).
-- **Sec-Fetch-Mode**: Indicates the mode of the request (e.g., `Sec-Fetch-Mode: navigate`).
-- **Sec-Fetch-Site**: Indicates the site issuing the request (e.g., `Sec-Fetch-Site: same-origin`).
-- **Sec-Fetch-User**: Indicates whether the request was triggered by user interaction (e.g., `Sec-Fetch-User: ?1`).
-- **Server**: Contains information about the software used by the server (e.g., `Server: Apache/2.4.1`).
-- **Set-Cookie**: Sends cookies from the server to the user agent (e.g., `Set-Cookie: sessionId=abc123; Path=/; HttpOnly`).
+- **Sec-Fetch-Dest**: Indicates the request’s structural destination, allowing the endpoint server to evaluate programmatic strictness (e.g., `Sec-Fetch-Dest: empty` or `Sec-Fetch-Dest: video`).
+- **Sec-Fetch-Mode**: Indicates the transactional mode of the request to evaluate security policy constraints (e.g., `Sec-Fetch-Mode: cors`).
+- **Sec-Fetch-Site**: Indicates the structural relationship of the cross-origin connection interface issuing the request (e.g., `Sec-Fetch-Site: cross-site`).
+- **Sec-Fetch-User**: Indicates whether the request was triggered explicitly by user runtime interaction (e.g., `Sec-Fetch-User: ?1`).
+- **Server**: Contains information about the server-side architecture software processing the request transaction (e.g., `Server: nginx`).
+- **Server-Timing**: Communicates diagnostic profiling metric segments concerning execution tracking intervals within the server processing pipeline (e.g., `Server-Timing: edge;dur=4.2, origin-lookup;dur=12.1`).
+- **Set-Cookie**: Sends cookies from the server to the user agent to manage session state persistence constraints (e.g., `Set-Cookie: sessionId=abc123; Path=/; HttpOnly; SameSite=None; Secure`).
 - **Strict-Transport-Security**: Enforces HTTPS by specifying the period in which the user agent should only access the server using secure connections (e.g., `Strict-Transport-Security: max-age=31536000`).
 
 ### T
@@ -94,17 +95,15 @@
 
 ### U
 - **Upgrade**: Requests to upgrade to a different protocol (e.g., `Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11`).
-- **User-Agent**: Contains information about the user agent originating the request (e.g., `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)`).
+- **User-Agent**: Contains structural software information regarding the user client instance originating the network request context (e.g., `User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36`).
 
 ### V
 - **Via**: Informs the server of proxies through which the request was sent (e.g., `Via: 1.0 fred, 1.1 example.com (Apache/1.1)`).
-- **Vary**: Informs the server to select the correct response based on the value of certain headers (e.g., `Vary: Accept-Encoding`).
+- **Vary**: Informs the server to select the correct response based on the value of certain headers (e.g., `Vary: Origin, Accept-Encoding`).
 
 ### W
 - **Warning**: Carries additional information about the status of a response (e.g., `Warning: 199 Miscellaneous warning`).
 - **WWW-Authenticate**: Defines the authentication method that should be used to access a resource (e.g., `WWW-Authenticate: Basic realm="Access to the site"`).
-
-
 
 ### X
 - **X-Content-Type-Options**: Indicates that the MIME types advertised in the `Content-Type` headers should not be changed or “sniffed” (e.g., `X-Content-Type-Options: nosniff`).
