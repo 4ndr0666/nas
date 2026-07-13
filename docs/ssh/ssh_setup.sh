@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Author: 4ndr0666
 # Purpose: Install GitHub-hosted SSH keys into ~/.ssh/authorized_keys on the local host.
-# Usage:   curl -fsSL https://raw.githubusercontent.com/4ndr0666/docs/main/ssh_setup.sh | bash
+# Usage:   curl -fsSL https://raw.githubusercontent.com/4ndr0666/nas/refs/heads/main/docs/ssh/ssh_setup.sh | bash
 set -euo pipefail
 
 USER_KEYS_URL="${1:-https://github.com/4ndr0666.keys}"
