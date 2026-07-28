@@ -1,0 +1,40 @@
+# rs0n Bug Bounty
+
+This document contains 36 ancillary resources discovered by Gemini via Deep Research using the rs0n Bug Bounty Framework YouTube video series (7 videos in total) as the operational baseline. In addition to that, the Elder-plinius based collegiate curriculum orchestrates the academic learning.
+
+1. **https://catalog.alfaisal.edu/document-and-data-retention-schedule**
+2. **https://pmc.ncbi.nlm.nih.gov/articles/PMC3004227/**
+3. **https://hpi.de/fileadmin/user_upload/fachgebiete/meinel/papers/Web-University/2012_Yang_CSEDU.pdf**
+4. **https://hpi.de/fileadmin/user_upload/fachgebiete/meinel/papers/Web-University/2012_Yang_ICWL.pdf**
+5. **https://transcriptapi.com/blog/rag-pipeline-with-youtube-transcripts**
+6. **https://www.dailydoseofds.com/build-an-mcp-powered-rag-over-videos/**
+7. **https://www.uipath.com/learning/video-tutorials/citrix-automation-ocr-data-extraction**
+8. **https://hpi.de/oldsite/fileadmin/user_upload/fachgebiete/meinel/papers/Web-University/2014_Yang_TLT.pdf**
+9. **https://enablement.deltek.com/course-catalog/?product=14**
+10. **https://daviddiy.github.io/2023/02/14/database-schema-migration-best-practices.html**
+11. **https://nextnative.dev/blog/database-schema-migration**
+12. **https://www.liquibase.com/resources/guides/database-schema-migration**
+13. **https://www.youtube.com/watch?v=7m1xBODl9tI**
+14. **https://catalog.alfaisal.edu/sites/default/files/pdf/academic_page/document-and-data-retention-schedule.pdf?1654193424**
+15. **https://github.com/EIT-NLP/AutoDataset**
+16. **https://archive.stsci.edu/fuse/DH_Final/Ancillary_Files.html**
+17. **https://lambda.gsfc.nasa.gov/data/interfaces/iras/wsdb_format.html**
+18. **https://www.agilytic.com/blog/from-proof-of-concept-to-industrialized-mvp-lessons-from-the-field**
+19. **https://github.com/nelsonlaidev/scoutly**
+20. **https://github.com/xberg-io/xberg**
+21. **https://northflank.com/blog/how-product-teams-turn-ai-prototypes-production-ready**
+22. **https://oneuptime.com/blog/post/2026-02-23-how-to-handle-database-schema-changes-with-terraform/view**
+23. **https://developer.nvidia.com/blog/how-to-integrate-computer-vision-pipelines-with-generative-ai-and-reasoning/**
+24. **https://stackoverflow.blog/2020/10/14/improve-database-performance-with-connection-pooling/**
+25. **https://hpi.de/fileadmin/user_upload/fachgebiete/meinel/papers/Web-University/2013_Yang_ICWL.pdf**
+26. **https://oasis.col.org/bitstreams/3b00901f-0402-4e44-a2b2-5dfcf6f34102/download**
+27. **https://last9.io/blog/postgresql-performance/**
+28. **https://yusuf-tayman.medium.com/power-of-the-k6-observability-of-the-databases-283b8045a17c**
+29. **https://github.com/SadikinAraf/imperium-crawl**
+30. **https://blogs.clemson.edu/cecas/small-models-big-capabilities/**
+31. **https://arxiv.org/html/2603.22120v2**
+32. **https://dev.to/tanin47/managing-the-database-schema-changes-for-your-app-14dn**
+33. **https://www.instaclustr.com/education/postgresql/top-10-postgresql-best-practices-for-2025/**
+34. **https://www.llamaindex.ai/glossary/metadata-extraction**
+35. **https://milvus.io/ai-quick-reference/what-methods-are-used-to-extract-textual-metadata-from-video-content**
+36. **https://github.com/leonardoserra/ruby_web_scraper**
