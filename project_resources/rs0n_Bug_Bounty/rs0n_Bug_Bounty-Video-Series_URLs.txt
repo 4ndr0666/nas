@@ -1,0 +1,7 @@
+1. **https://www.youtube.com/watch?v=Vl3gBv2G808** (Bug Bounty | 404 Response = API -- Fuzz For Endpoints #bugbounty #cybersecurity)
+2. **https://www.youtube.com/watch?v=q6bY2G7P4M8** (Bug Bounty | Looks Like a Session Riding Attack #bugbounty #cybersecurity)
+3. **https://www.youtube.com/watch?v=v8-g_S7HhQg** (Bug Bounty | What Are HTTP Requests?? #bugbounty bugbounty #cybersecurity)
+4. **https://www.youtube.com/watch?v=m7H8O0g_P8M** (Bug Bounty | When Applications Look Similar But Aren't... #bugbounty #cybersecurity)
+5. **https://www.youtube.com/watch?v=gT8M_Y-O8Ug** (Live Bug Bounty Hunting | Authenticated Testing the Client-Side & Server-Side on Figma's Core App)
+6. **https://www.youtube.com/watch?v=p7G8O_Y-U8o** (Live Bug Bounty Recon | New HackerOne Program Vendasta (Framework Data Available!))
+7. **https://www.youtube.com/watch?v=vVj1_Y_H8O8** (The Ars0n Framework V2 - Demo Version of My New Bug Bounty Hunting Framework is Available Now!)
