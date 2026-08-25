@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────────────────────────────────────
-# 4NDR0666OS UNIFIED SET - ABSOLUTE CONTAINMENT MANIFEST [v2.0]
+# 4NDR0666OS ABSOLUTE CONTAINMENT MANIFEST [v2.0]
 # Combined: Local Ops + Tradecraft + escalation + VS/MSVC + Multi-Log
 # ──────────────────────────────────────────────────────────────────────────────
 
@@ -38,6 +38,15 @@ finalize_temp/
 *.session
 *.lock
 *lock
+# EXCEPTION: Preserve deterministic builds across ecosystems
+!package-lock.json
+!yarn.lock
+!pnpm-lock.yaml
+!bun.lockb
+!Cargo.lock
+!poetry.lock
+!Gemfile.lock
+!composer.lock
 
 # == 3. RUNTIME & LANGUAGES ==
 ## Python / Mypy
